@@ -1,0 +1,56 @@
+{
+  "extends": "eslint-config-airbnb-base",
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 2021
+  },
+  "globals": {
+    "describe": false,
+    "it": false,
+    "before": false,
+    "beforeEach": false,
+    "after": false,
+    "afterEach": false
+  },
+  "rules": {
+    "no-console": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "packageDir": ["./", "../../"],
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ],
+    "max-len": [
+      "error",
+      120,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "function-paren-newline": ["error", "consistent"]
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.js"
+      ],
+      "rules": {
+        "no-restricted-syntax": "off",
+        "no-await-in-loop": "off",
+        "class-methods-use-this": "off",
+        "max-len": "off",
+        "default-param-last": "off",
+        "grouped-accessor-pairs": "off",
+        "import/extensions": "off"
+      }
+    }
+  ]
+}

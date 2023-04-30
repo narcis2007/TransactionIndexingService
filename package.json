@@ -1,0 +1,38 @@
+{
+  "name": "TransactionIndexingService",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env node index",
+    "start-dev": "cross-env DEBUG_DEPTH=10 nodemon -w ./index.js -w ./src -w ./config -w ./.env",
+    "start-listener": "cross-env DEBUG_DEPTH=10 PROCESS_NAME=listener node index",
+    "start-listener-dev": "cross-env DEBUG_DEPTH=10 PROCESS_NAME=listener nodemon -w ./index.js -w ./src -w ./config -w ./.env",
+    "lint": "eslint src tests",
+    "lint-fix": "eslint --fix src tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.3.0",
+    "dotenv": "^16.0.1",
+    "joi": "^17.6.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.1.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "mongoose": "^6.4.0",
+    "mongoose-aggregate-paginate-v2": "^1.0.6",
+    "mongoose-paginate-v2": "^1.7.0",
+    "sleep": "^6.3.0",
+    "web3": "^1.9.0"
+  }
+}

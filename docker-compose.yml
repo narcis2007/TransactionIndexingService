@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app_init:
+    image: "node:16.13-alpine"
+    links: [
+      transactionIndexingService-mongo
+    ]
+    entrypoint: "echo 'Containers successfully initialized.'"
+
+  transactionIndexingService-mongo:
+    image: mongo:4.0
+    container_name: "transactionIndexingService-mongo"
+    ports:
+      - 27017:27017
+    volumes:
+      - /data/db
+    command: mongod --smallfiles --logpath=/dev/null # --quiet

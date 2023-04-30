@@ -1,6 +1,6 @@
 # TransactionIndexingService
 
-This POC has a few differences compared to the architecture attached:
+This POC has a few differences compared to the architecture attached (Indexing Service Architecture + Explanation.png):
 - There is no scaling/queue system to keep it simple.  
 - The listener is the one who indexes the transactions directly
 - There is no option to plug in analyzers  to get more interesting data out of the transactions
